@@ -11,10 +11,10 @@ COPY package.json yarn.lock ./
 RUN yarn install
 
 
-COPY public . ./public
+# Copy the public and src folders from their actual paths
+COPY eadw-viz/public ./public
 
-
-COPY src ./src
+COPY eadw-viz/src ./src
 
 
 COPY . .
